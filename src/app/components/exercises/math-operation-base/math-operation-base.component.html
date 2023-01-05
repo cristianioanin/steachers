@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <div class="exercise__expression">
+    <span>{{ operands.join(operationSign) }}</span><span> = </span><input class="exercise__response" type="number" formControlName="response" placeholder="???">
+  </div>
+  <button *ngIf="currentState === ExerciseStateEnum.NEW"
+          class="exercise__control"
+          (click)="validateAttempt()"
+          [disabled]="currentState === ExerciseStateEnum.NEW && form.pristine || form.invalid">
+    Verifică
+  </button>
+  <button *ngIf="currentState !== ExerciseStateEnum.NEW"
+          (click)="generateNewExercise()">
+    Următorul exercițiu
+  </button>
+</form>
+<div>{{ attemptStateMap.get(currentState) }}</div>

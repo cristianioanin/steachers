@@ -1,0 +1,8 @@
+.exercise-log--correct {
+  color: green;
+}
+
+.exercise-log--wrong {
+  color: darkred;
+  text-decoration: line-through;
+}
