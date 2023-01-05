@@ -1,7 +1,7 @@
-<nav>
-  <ul>
+<nav class="navbar">
+  <ul class="navbar-list">
     <li *ngFor="let item of operationsRoutes">
-      <a [routerLink]="item.routerLink">{{ item.name }}</a>
+      <a [routerLink]="item.routerLink" class="navbar-link">{{ item.name }}</a>
     </li>
   </ul>
 </nav>

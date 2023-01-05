@@ -1,0 +1,4 @@
+.exercise__control {
+  display: flex;
+  justify-content: flex-end;
+}

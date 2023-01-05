@@ -1,8 +1,13 @@
 .exercise-log--correct {
-  color: green;
+  color: var(--color-emerald);
 }
 
 .exercise-log--wrong {
-  color: darkred;
+  color: var(--color-pomegranate);
   text-decoration: line-through;
+}
+
+.history-log {
+  list-style: none;
+  margin-top: 1rem;
 }

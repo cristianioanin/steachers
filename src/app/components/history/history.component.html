@@ -1,5 +1,5 @@
 <div *ngIf="history$ | async as exerciseLogs">
-  <ul>
+  <ul class="history-log">
     <li *ngFor="let log of exerciseLogs">
       <span [class.exercise-log--correct]="log.isCorrect" [class.exercise-log--wrong]="!log.isCorrect">{{ log.expression }}</span>
     </li>

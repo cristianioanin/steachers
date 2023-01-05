@@ -2,15 +2,17 @@
   <div class="exercise__expression">
     <span>{{ operands.join(operationSign) }}</span><span> = </span><input class="exercise__response" type="number" formControlName="response" placeholder="???">
   </div>
-  <button *ngIf="currentState === ExerciseStateEnum.NEW"
-          class="exercise__control"
-          (click)="validateAttempt()"
-          [disabled]="currentState === ExerciseStateEnum.NEW && form.pristine || form.invalid">
-    Verifică
-  </button>
-  <button *ngIf="currentState !== ExerciseStateEnum.NEW"
-          (click)="generateNewExercise()">
-    Următorul exercițiu
-  </button>
+  <div class="exercise__control">
+    <button *ngIf="currentState === ExerciseStateEnum.NEW"
+            (click)="validateAttempt()"
+            [disabled]="currentState === ExerciseStateEnum.NEW && form.pristine || form.invalid">
+      Verifică
+    </button>
+    <button *ngIf="currentState !== ExerciseStateEnum.NEW"
+            (click)="generateNewExercise()">
+      Următorul exercițiu
+    </button>
+  </div>
+
 </form>
 <div>{{ attemptStateMap.get(currentState) }}</div>
