@@ -1,0 +1,18 @@
+.navbar {
+  background-color: var(--color-midnight);
+}
+
+.navbar .navbar-list {
+  display: flex;
+  list-style: none;
+  column-gap: 1rem;
+}
+
+.navbar .navbar-list .navbar-link {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: .5rem;
+  display: inline-flex;
+  border-bottom: 2px solid var(--color-emerald);
+  margin: .25rem .5rem;
+}

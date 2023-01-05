@@ -1,2 +1,19 @@
+@import "./assets/styles/colors.css";
+@import "./assets/styles/navbar.css";
 @import "./assets/styles/reset.css";
 @import "./assets/styles/typography.css";
+
+
+button {
+  padding: .25em .5em;
+  background-color: var(--color-wisteria);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: .5rem;
+}
+
+button:disabled {
+  opacity: .75;
+}
